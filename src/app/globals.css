@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
 body{
     background-color: #EDF1F4;
@@ -29,7 +33,7 @@ body{
 }
 
 .leading{
-    line-height: 60px;
+    line-height: 65px;
 }
 
 @media (max-width:700px) {
@@ -73,3 +77,34 @@ nav ul a:hover::after{
         transform: translateY(0);
     }
 }
+
+
+/* Estilo para o contêiner do select */
+div::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+    
+  }
+  
+  /* Estilo para a "thumb" (o botão de arrastar) da barra de rolagem */
+  div::-webkit-scrollbar-thumb {
+    background-color: #FF5000; /* Cor da "thumb" */
+    border-radius: 6px; /* Borda arredondada da "thumb" */
+  }
+  
+  /* Estilo para a "track" (a trilha) da barra de rolagem */
+  div::-webkit-scrollbar-track {
+    background-color: #E5E5E5; /* Cor da trilha */
+  }
+  
+
+.animaHelp{
+    animation: animaHelp .5s linear;
+}
+
+  @keyframes animaHelp {
+    from{
+        width: 0%;
+    } to{
+        width: 100%;
+    }
+  }

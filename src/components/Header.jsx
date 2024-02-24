@@ -11,8 +11,8 @@ const Header = () => {
         <ul className='flex gap-6 font-bold flex-col lg:flex-row'>
             <li><Link href="/">Início</Link></li>
             <li><Link href="carros">Veículos</Link></li>
-            <li><Link href="carros">sobre Nós</Link></li>
-            <li><Link href="carros">Contato</Link></li>
+            <li><Link href="sobre">sobre Nós</Link></li>
+            <li><Link href="contato">Contato</Link></li>
         </ul>
       </nav>
     </div>
