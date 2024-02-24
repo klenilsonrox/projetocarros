@@ -2,32 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+    background-color: #EDF1F4;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 10px auto;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.auto{
+   flex: 1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.anima:hover{
+    transform: scale(1.1)
+
+}
+
+.leading{
+    line-height: 60px;
+}
+
+@media (max-width:700px) {
+    .leading{
+        line-height: 40px;
+    } 
+}
+
+nav ul a::after{
+    content: "";
+    width: 0%;
+    display: block;
+    color: white;
+    background: white;
+    height: 3px;
+    transition: .3s ease-in;
+}
+
+nav ul a:hover::after{
+    content: "";
+    width: 100%;
+    display: block;
+    color: white;
+    background: white;
+    height: 3px;
+    transition: .3s ease-in;
+}
+
+
+
+.animarModal{
+    
+    animation: animarModal .6s ease-in-out;
+}
+
+@keyframes animarModal {
+    from{
+        transform: translateY(-190px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
