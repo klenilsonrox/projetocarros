@@ -33,6 +33,35 @@ const Page = () => {
       return
     }
 
+    if(name===""){
+      alert("coloque o nome do veículo")
+      return
+    }
+
+    if(description===""){
+      alert("coloque a descriçao do veiculo")
+      return
+    }
+
+    if(AnoModelo===""){
+      alert("coloque ano de fabricação do veículo")
+      return
+    }
+
+    if(Preco===""){
+      alert("coloque o Preço do veículo")
+      return
+    }
+    if(Whatsapp===""){
+      alert("coloque o numero do seu whatsapp para contato")
+      return
+    }
+
+    if(kmRodados===""){
+      alert("coloque a quilometragem do seu veículo")
+      return
+    }
+
     try{
       setCadastrando(true)
         await app.post("/create", {
@@ -54,12 +83,13 @@ const Page = () => {
         setName("")
         setPreco("")
         setWhatsapp("")
-        setModalInput("")
+        setModalInput(false)
       
     } catch(error){
       setError(error.message)
     }finally{
       setError(null)
+  
     }
   }
 
