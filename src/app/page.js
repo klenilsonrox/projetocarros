@@ -47,6 +47,14 @@ const Page = () => {
         })
 
         setCadastrando(false)
+        setAnoModelo("")
+        setCategory("")
+        setDescription("")
+        setKmRodados("")
+        setName("")
+        setPreco("")
+        setWhatsapp("")
+        setModalInput("")
       
     } catch(error){
       setError(error.message)
